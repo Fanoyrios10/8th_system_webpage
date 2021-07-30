@@ -7,11 +7,13 @@
 <html>
 
   <head>
-    <title>NEW_APP_NAME</title>
+    <title>8ο Σύστημα Αεροπροσκόπων Χίου</title>
 
     <% /* Viewport tag for sensible mobile support */ %>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="shortcut icon" href="/images/8th_system_logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/cc178605cc.js" crossorigin="anonymous"></script>
     <% /* Script tags should normally be included further down the page- but any
     scripts that load fonts (e.g. Fontawesome ≥v5) are special exceptions to the
     rule. (Include them up here along with any hard-coded «link» tags for Typekit,
@@ -50,40 +52,201 @@
 
   <body>
     <div purpose="page-wrap">
-      <header class="navbar navbar-expand-sm navbar-dark bg-dark flex-column flex-md-row justify-content-between"
-        purpose="page-header">
-        <a style="cursor: pointer;" class="navbar-brand mr-0" href="/"><img style="height: 20px;" class="logo"
-            alt="NEW_APP_NAME logo" src="/images/logo.png" /></a>
-        <div class="navbar-nav flex-row">
-          <!-- LOGGED-IN NAVIGATION -->
-          <% if(me) { %>
-          <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0" href="/contact">Help</a>
-          <!-- Only in desktop nav -->
-          <div class="nav-item dropdown d-none d-sm-block">
-            <a class="nav-link dropdown-toggle" id="header-account-menu-link" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">Account</a>
-            <div style="left: auto; right: 0;" class="dropdown-menu" aria-labelledby="header-account-menu-link">
-              <a class="dropdown-item" href="/account">Settings</a>
-              <a class="dropdown-item" href="/logout">Sign out</a>
-            </div>
+      <div class="main-body">
+      <nav class="navbar5">
+        <a href="#home" title="Αρχική Σελίδα" class="green_area animate__animated animate__slideInDown"><i class="fas fa-home"></i>
+        </a>
+        <div class="dropdown5">
+          <button class="dropbtn animate__animated animate__slideInDown">Τι είναι... 
+            <i class="fas fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content animate__animated animate__zoomIn animate__faster">
+            <a href="#" class="animate__animated animate__bounceInLeft">Προσκοπισμός</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Αγέλη</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Ομάδα</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Ε.Κ.Σ.</a>
           </div>
-          <!-- Only in mobile nav -->
-          <a class="nav-item nav-link ml-2 mr-2 d-block d-sm-none" href="/account">Account Settings</a>
-          <a class="nav-item nav-link ml-2 mr-2 d-block d-sm-none" href="/logout">Sign out</a>
-          <% } else { %>
-          <!-- LOGGED-OUT NAVIGATION -->
-          <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/faq">FAQ</a>
-          <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/login">Log in</a>
-          <!-- Only in desktop nav -->
-          <div class="form-inline d-none ml-2 d-md-block">
-            <a class="btn btn-outline-info" href="/signup">Sign up</a>
+        </div> 
+        <div class="dropdown5">
+          <button class="dropbtn animate__animated animate__slideInDown">Το Σύστημα 
+            <i class="fas fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content animate__animated animate__zoomIn animate__faster">
+            <a href="#" class="animate__animated animate__bounceInLeft">Ιστορία</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Στέγαση</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Βαθμοφόροι</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Τραγούδι</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Throwbacks</a>
           </div>
-          <!-- Only in mobile nav -->
-          <a class="nav-item nav-link text-info ml-2 d-block d-md-none" href="/signup">Sign up</a>
-          <% } %>
         </div>
-      </header>
-
+        <div class="dropdown5">
+          <button class="dropbtn animate__animated animate__slideInDown">Δράσεις 
+            <i class="fas fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content animate__animated animate__zoomIn animate__faster">
+            <a href="#" class="animate__animated animate__bounceInLeft">Δράσεις Αγέλης</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Δράσεις Ομάδας</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Δράσεις Ε.Κ.Σ.</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Δράσεις Βαθμοφόρων</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Δράσεις Συστήματος</a>
+          </div>
+        </div>
+        <div class="dropdown5">
+          <button class="dropbtn animate__animated animate__slideInDown">Χρήσιμα 
+            <i class="fas fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content animate__animated animate__zoomIn animate__faster">
+            <a href="#" class="animate__animated animate__bounceInLeft">Ανακοινώσεις</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Στολή</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Δελτίο Υγείας</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Δήμος</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Σ.Ε.Π.</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Προσκοπικό Πρατήριο</a>
+          </div>
+        </div>
+        <div class="dropdown5">
+          <button class="dropbtn animate__animated animate__slideInDown">Συχνές ερωτήσεις 
+            <i class="fas fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content animate__animated animate__zoomIn animate__faster">
+            <a href="#" class="animate__animated animate__bounceInLeft">Πως θα γίνεις Πρόσκοπος</a>
+          </div>
+        </div>
+        <div class="dropdown5">
+          <button class="dropbtn animate__animated animate__slideInDown">Εμπιστευτικά 
+            <i class="fas fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content animate__animated animate__zoomIn animate__faster">
+            <a href="#" class="animate__animated animate__bounceInLeft">Αγέλη</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Ομάδα</a>
+          </div>
+        </div>
+        <a href="#" class="animate__animated animate__slideInDown">Επικοινωνία</a>
+      </nav>
+      <nav class="navbar6">
+        <a href="#" style="background-color: rgb(0, 128, 0);"><i class="fas fa-home"></i></a>
+        <div>
+          <button class="dropbtn2">Τι είναι... <i class="fas fa-caret-down transitionUp"></i></button>
+          <div class="dropdown-content2">
+            <a href="#" class="animate__animated animate__bounceInLeft">Προσκοπισμός</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Αγέλη</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Ομάδα</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Ε.Κ.Σ.</a>
+          </div>
+        </div>
+        <div>
+          <button class="dropbtn2">Το Σύστημα... <i class="fas fa-caret-down"></i></button>
+          <div class="dropdown-content2">
+            <a href="#" class="animate__animated animate__bounceInLeft">Ιστορία</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Στέγαση</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Βαθμοφόροι</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Τραγούδι</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Throwbacks</a>
+          </div>
+        </div>
+        <div>
+          <button class="dropbtn2">Δράσεις <i class="fas fa-caret-down"></i></button>
+          <div class="dropdown-content2">
+            <a href="#" class="animate__animated animate__bounceInLeft">Δράσεις Αγέλης</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Δράσεις Ομάδας</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Δράσεις Ε.Κ.Σ.</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Δράσεις Βαθμοφόρων</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Δράσεις Συστήματος</a>
+          </div>
+        </div>
+        <div>
+          <button class="dropbtn2">Χρήσιμα <i class="fas fa-caret-down"></i></button>
+          <div class="dropdown-content2">
+            <a href="#" class="animate__animated animate__bounceInLeft">Ανακοινώσεις</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Στολή</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Δελτίο Υγείας</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Δήμος</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Σ.Ε.Π.</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Προσκοπικό Πρατήριο</a>
+          </div>
+        </div>
+        <div>
+          <button class="dropbtn2">Συχνές ερωτήσεις <i class="fas fa-caret-down"></i></button>
+          <div class="dropdown-content2">
+            <a href="#" class="animate__animated animate__bounceInLeft">Πως θα γίνεις Πρόσκοπος</a>
+          </div>
+        </div>
+        <div>
+          <button class="dropbtn2">Εμπιστευτικά <i class="fas fa-caret-down"></i></button>
+          <div class="dropdown-content2">
+            <a href="#" class="animate__animated animate__bounceInLeft">Αγέλη</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Ομάδα</a>
+          </div>
+        </div>
+        <a href="#">Επικοινωνία</a>
+      </nav>
+      <script>
+        let dropbtn2 = document.querySelectorAll(".dropbtn2");
+        dropbtn2.forEach(element => {
+          let buttonCounter = 0;
+          element.addEventListener("click", function(){
+            if (buttonCounter === 0) {
+              let childNodes = element.nextElementSibling;
+            console.log(element)
+            childNodes.style.transision = "height 1s ease-in"
+            childNodes.style.display = "block"
+            buttonCounter = 1;
+            }else{
+              let childNodes = element.nextElementSibling;
+            childNodes.style.display = "none"
+            buttonCounter = 0;
+                }
+          })
+        });
+      </script>
+      <script>
+        // let dropdownContent = document.querySelectorAll(".dropdown-content");
+        // let dropdownBtn = document.querySelectorAll(".dropbtn");
+        // console.log(dropdownBtn);
+        // console.log(dropdownContent);
+        // dropdownContent.forEach(function(item){
+        //   dropdownBtn.forEach(function(item2){
+        //   dropdownBtn.addEventListener("mouseenter", function(){
+        //     item.classList.add("animate__animated","animate__zoomIn")
+        //   })
+        //   })
+        // })
+        // dropdownContent.forEach(function(item){
+        //   dropdownContent.forEach(function(item2){
+        //   dropdownBtn.addEventListener("mouseleave", function(){
+        //     item.classList.remove("animate__animated","animate__zoomIn")
+        //     item.classList.add("animate__animated","animate__zoomOut")
+        //   })
+        //   })
+        // })
+        // let x =0;
+        // for (let i = 0; i < dropdownBtn.length; i++) {
+        //   const element = dropdownBtn[i];
+        //   element.addEventListener("mouseenter", function(){
+        //     x = i;
+        //     console.log(x);
+        //     return x;
+        //   })
+          
+        // }
+        // // dropdownContent.forEach(function(item){
+        //   for (let i = 0; i < dropdownBtn.length; i++) {
+        //     const element = dropdownBtn[i];
+        //     element.addEventListener("mouseover", function(){
+        //       dropdownContent[x].classList.add("animate__animated","animate__zoomIn");
+        //       setTimeout(() => {
+        //         dropdownContent[x].classList.remove("animate__animated","animate__zoomIn");
+        //       }, 800);
+        //     })
+        //     element.addEventListener("mouseout", function(){
+        //       dropdownContent[x].classList.add("animate__animated","animate__zoomOut");
+        //       setTimeout(() => {
+        //         dropdownContent[x].classList.remove("animate__animated","animate__zoomOut");
+        //       }, 800);
+        //     })
+        //   }
+        // })
+      </script>
       <!-- Alert if email has not been confirmed -->
       <% if(me&&me.emailChangeCandidate) { %>
       <div class="container-fluid">
@@ -121,6 +284,7 @@
             target="_blank" href="NEW_APP_COMPANY_ABOUT_HREF">NEW_APP_COMPANY_NAME</a>. <br
             class="d-block d-sm-none" />All rights reserved.</small>
       </footer>
+      </div>
     </div>
 
 
