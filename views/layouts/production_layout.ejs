@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <link rel="shortcut icon" href="/images/8th_system_logo.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/cc178605cc.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <% /* Script tags should normally be included further down the page- but any
     scripts that load fonts (e.g. Fontawesome ≥v5) are special exceptions to the
     rule. (Include them up here along with any hard-coded «link» tags for Typekit,
@@ -123,10 +124,10 @@
         </div>
         <a href="#" class="animate__animated animate__slideInDown">Επικοινωνία</a>
       </nav>
-      <nav class="navbar6">
-        <a href="#" style="background-color: rgb(0, 128, 0);"><i class="fas fa-home"></i></a>
+      <nav class="navbar6 animate__animated animate__slideInDown" >
+        <a href="#" style="background-color: rgb(0, 128, 0); display: block; border-bottom: 2px solid red; border-top: 2px solid red;"><i class="fas fa-home"></i></a>
         <div>
-          <button class="dropbtn2">Τι είναι... <i class="fas fa-caret-down transitionUp"></i></button>
+          <button class="dropbtn2">Τι είναι... <i class="fas fa-arrow-alt-circle-down"></i></button>
           <div class="dropdown-content2">
             <a href="#" class="animate__animated animate__bounceInLeft">Προσκοπισμός</a>
             <a href="#" class="animate__animated animate__bounceInLeft">Αγέλη</a>
@@ -135,7 +136,7 @@
           </div>
         </div>
         <div>
-          <button class="dropbtn2">Το Σύστημα... <i class="fas fa-caret-down"></i></button>
+          <button class="dropbtn2">Το Σύστημα... <i class="fas fa-arrow-alt-circle-down"></i></button>
           <div class="dropdown-content2">
             <a href="#" class="animate__animated animate__bounceInLeft">Ιστορία</a>
             <a href="#" class="animate__animated animate__bounceInLeft">Στέγαση</a>
@@ -145,7 +146,7 @@
           </div>
         </div>
         <div>
-          <button class="dropbtn2">Δράσεις <i class="fas fa-caret-down"></i></button>
+          <button class="dropbtn2">Δράσεις <i class="fas fa-arrow-alt-circle-down"></i></button>
           <div class="dropdown-content2">
             <a href="#" class="animate__animated animate__bounceInLeft">Δράσεις Αγέλης</a>
             <a href="#" class="animate__animated animate__bounceInLeft">Δράσεις Ομάδας</a>
@@ -155,7 +156,7 @@
           </div>
         </div>
         <div>
-          <button class="dropbtn2">Χρήσιμα <i class="fas fa-caret-down"></i></button>
+          <button class="dropbtn2">Χρήσιμα <i class="fas fas fa-arrow-alt-circle-down"></i></button>
           <div class="dropdown-content2">
             <a href="#" class="animate__animated animate__bounceInLeft">Ανακοινώσεις</a>
             <a href="#" class="animate__animated animate__bounceInLeft">Στολή</a>
@@ -166,86 +167,41 @@
           </div>
         </div>
         <div>
-          <button class="dropbtn2">Συχνές ερωτήσεις <i class="fas fa-caret-down"></i></button>
+          <button class="dropbtn2">Συχνές ερωτήσεις <i class="fas fa-arrow-alt-circle-down"></i></button>
           <div class="dropdown-content2">
             <a href="#" class="animate__animated animate__bounceInLeft">Πως θα γίνεις Πρόσκοπος</a>
           </div>
         </div>
         <div>
-          <button class="dropbtn2">Εμπιστευτικά <i class="fas fa-caret-down"></i></button>
+          <button class="dropbtn2">Εμπιστευτικά <i class="fas fa-arrow-alt-circle-down"></i></button>
           <div class="dropdown-content2">
             <a href="#" class="animate__animated animate__bounceInLeft">Αγέλη</a>
             <a href="#" class="animate__animated animate__bounceInLeft">Ομάδα</a>
           </div>
         </div>
-        <a href="#">Επικοινωνία</a>
+        <a href="#" style="background-color: rgb(97,86,236); display: block; border-bottom: 2px solid red; border-top: 2px solid red;">Επικοινωνία</a>
       </nav>
       <script>
         let dropbtn2 = document.querySelectorAll(".dropbtn2");
+        let buttonCounter2 = 0;
         dropbtn2.forEach(element => {
-          let buttonCounter = 0;
-          element.addEventListener("click", function(){
-            if (buttonCounter === 0) {
-              let childNodes = element.nextElementSibling;
-            console.log(element)
-            childNodes.style.transision = "height 1s ease-in"
-            childNodes.style.display = "block"
-            buttonCounter = 1;
-            }else{
-              let childNodes = element.nextElementSibling;
-            childNodes.style.display = "none"
-            buttonCounter = 0;
+              let sibling = element.nextElementSibling;
+              let child = element.lastChild
+              $(element).click(function () { 
+                $(sibling).animate({
+                  height:'toggle'
+                })
+                if (buttonCounter2 === 0) {
+                  $(child).removeClass("transitionDown")
+                  $(child).addClass("transitionUp")
+                  buttonCounter2 = 1;
+                }else{
+                  $(child).removeClass("transitionUp")
+                  $(child).addClass("transitionDown")
+                  buttonCounter2 = 0
                 }
+              });
           })
-        });
-      </script>
-      <script>
-        // let dropdownContent = document.querySelectorAll(".dropdown-content");
-        // let dropdownBtn = document.querySelectorAll(".dropbtn");
-        // console.log(dropdownBtn);
-        // console.log(dropdownContent);
-        // dropdownContent.forEach(function(item){
-        //   dropdownBtn.forEach(function(item2){
-        //   dropdownBtn.addEventListener("mouseenter", function(){
-        //     item.classList.add("animate__animated","animate__zoomIn")
-        //   })
-        //   })
-        // })
-        // dropdownContent.forEach(function(item){
-        //   dropdownContent.forEach(function(item2){
-        //   dropdownBtn.addEventListener("mouseleave", function(){
-        //     item.classList.remove("animate__animated","animate__zoomIn")
-        //     item.classList.add("animate__animated","animate__zoomOut")
-        //   })
-        //   })
-        // })
-        // let x =0;
-        // for (let i = 0; i < dropdownBtn.length; i++) {
-        //   const element = dropdownBtn[i];
-        //   element.addEventListener("mouseenter", function(){
-        //     x = i;
-        //     console.log(x);
-        //     return x;
-        //   })
-          
-        // }
-        // // dropdownContent.forEach(function(item){
-        //   for (let i = 0; i < dropdownBtn.length; i++) {
-        //     const element = dropdownBtn[i];
-        //     element.addEventListener("mouseover", function(){
-        //       dropdownContent[x].classList.add("animate__animated","animate__zoomIn");
-        //       setTimeout(() => {
-        //         dropdownContent[x].classList.remove("animate__animated","animate__zoomIn");
-        //       }, 800);
-        //     })
-        //     element.addEventListener("mouseout", function(){
-        //       dropdownContent[x].classList.add("animate__animated","animate__zoomOut");
-        //       setTimeout(() => {
-        //         dropdownContent[x].classList.remove("animate__animated","animate__zoomOut");
-        //       }, 800);
-        //     })
-        //   }
-        // })
       </script>
       <!-- Alert if email has not been confirmed -->
       <% if(me&&me.emailChangeCandidate) { %>
