@@ -47,6 +47,7 @@
     <link rel="stylesheet" href="/dependencies/fontawesome.css">
     <link rel="stylesheet" href="/styles/animate.min.css">
     <link rel="stylesheet" href="/styles/importer.css">
+    <link rel="stylesheet" href="/styles/style-home.css">
     <link rel="stylesheet" href="/styles/style-layout.css">
     <!--STYLES END-->
   </head>
@@ -65,6 +66,8 @@
             <a href="#" class="animate__animated animate__bounceInLeft">Προσκοπισμός</a>
             <a href="#" class="animate__animated animate__bounceInLeft">Αγέλη</a>
             <a href="#" class="animate__animated animate__bounceInLeft">Ομάδα</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Ανιχνευτές</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Δίκτυο</a>
             <a href="#" class="animate__animated animate__bounceInLeft">Ε.Κ.Σ.</a>
           </div>
         </div> 
@@ -85,11 +88,12 @@
             <i class="fas fa-caret-down"></i>
           </button>
           <div class="dropdown-content animate__animated animate__zoomIn animate__faster">
-            <a href="#" class="animate__animated animate__bounceInLeft">Δράσεις Αγέλης</a>
-            <a href="#" class="animate__animated animate__bounceInLeft">Δράσεις Ομάδας</a>
-            <a href="#" class="animate__animated animate__bounceInLeft">Δράσεις Ε.Κ.Σ.</a>
-            <a href="#" class="animate__animated animate__bounceInLeft">Δράσεις Βαθμοφόρων</a>
-            <a href="#" class="animate__animated animate__bounceInLeft">Δράσεις Συστήματος</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Αγέλης</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Ομάδας</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Ανιχνευτών</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Δικτύου</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Βαθμοφόρων</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Συστήματος</a>
           </div>
         </div>
         <div class="dropdown5">
@@ -132,6 +136,8 @@
             <a href="#" class="animate__animated animate__bounceInLeft">Προσκοπισμός</a>
             <a href="#" class="animate__animated animate__bounceInLeft">Αγέλη</a>
             <a href="#" class="animate__animated animate__bounceInLeft">Ομάδα</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Ανιχνευτές</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Δίκτυο</a>
             <a href="#" class="animate__animated animate__bounceInLeft">Ε.Κ.Σ.</a>
           </div>
         </div>
@@ -148,15 +154,16 @@
         <div>
           <button class="dropbtn2">Δράσεις <i class="fas fa-arrow-alt-circle-down"></i></button>
           <div class="dropdown-content2">
-            <a href="#" class="animate__animated animate__bounceInLeft">Δράσεις Αγέλης</a>
-            <a href="#" class="animate__animated animate__bounceInLeft">Δράσεις Ομάδας</a>
-            <a href="#" class="animate__animated animate__bounceInLeft">Δράσεις Ε.Κ.Σ.</a>
-            <a href="#" class="animate__animated animate__bounceInLeft">Δράσεις Βαθμοφόρων</a>
-            <a href="#" class="animate__animated animate__bounceInLeft">Δράσεις Συστήματος</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Αγέλης</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Ομάδας</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Ανιχνευτών</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Δικτύου</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Βαθμοφόρων</a>
+            <a href="#" class="animate__animated animate__bounceInLeft">Συστήματος</a>
           </div>
         </div>
         <div>
-          <button class="dropbtn2">Χρήσιμα <i class="fas fas fa-arrow-alt-circle-down"></i></button>
+          <button class="dropbtn2">Χρήσιμα <i class="fas fa-arrow-alt-circle-down"></i></button>
           <div class="dropdown-content2">
             <a href="#" class="animate__animated animate__bounceInLeft">Ανακοινώσεις</a>
             <a href="#" class="animate__animated animate__bounceInLeft">Στολή</a>
@@ -183,7 +190,6 @@
       </nav>
       <script>
         let dropbtn2 = document.querySelectorAll(".dropbtn2");
-        let buttonCounter2 = 0;
         dropbtn2.forEach(element => {
               let sibling = element.nextElementSibling;
               let child = element.lastChild
@@ -191,18 +197,17 @@
                 $(sibling).animate({
                   height:'toggle'
                 })
-                if (buttonCounter2 === 0) {
+                if (child.classList.value === "fas fa-arrow-alt-circle-down" || child.classList.value === "fas fa-arrow-alt-circle-down transitionDown") {
                   $(child).removeClass("transitionDown")
                   $(child).addClass("transitionUp")
-                  buttonCounter2 = 1;
                 }else{
                   $(child).removeClass("transitionUp")
                   $(child).addClass("transitionDown")
-                  buttonCounter2 = 0
                 }
               });
           })
       </script>
+      <h1 class="site-title">8<sup>ο</sup> Σύστημα Αεροπροσκόπων Χίου</h1>
       <!-- Alert if email has not been confirmed -->
       <% if(me&&me.emailChangeCandidate) { %>
       <div class="container-fluid">
