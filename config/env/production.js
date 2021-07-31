@@ -250,10 +250,10 @@ module.exports = {
     * > Be sure to use the right protocol!  ("http://" vs. "https://")         *
     *                                                                          *
     ***************************************************************************/
-    // onlyAllowOrigins: [
-    //   'https://eigth-system.herokuapp.com',
-    //   'https://staging.example.com',
-    // ],
+    onlyAllowOrigins: [
+      'https://eigth-system.herokuapp.com',
+      // 'https://staging.example.com',
+    ],
 
 
     /***************************************************************************
